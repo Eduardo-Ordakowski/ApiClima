@@ -75,6 +75,11 @@ body{
     margin-bottom: 20px;
 }
 
+#map {
+    height: 400px; /* Por exemplo, 400 pixels de altura */
+    width: 100%;   /* Para ocupar toda a largura do contêiner pai */
+}
+
 .tempInfos{
     display: flex;
     align-items: center;
@@ -89,6 +94,10 @@ body{
     color:white;
 
     border-radius: 20px ;
+}
+
+.tempImg img{ 
+    width: 70px;
 }
 
 #tempValue{
@@ -145,4 +154,15 @@ body{
 
 .infos #windImg{
     color:#2ee4a7
+}
+
+.alert{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.alert img{
+    width: 100px;
 }

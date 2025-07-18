@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API Clima</title>
 
-    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/style.css" />
 
     <!--Font Awesome-->
 
@@ -14,79 +14,32 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!---------------->
-
-    <script src="js/script.js"></script>
 </head>
 
 <body>
     <div class="container">
-
         <form class="search">
             <i id="searchImg" class="fa-solid fa-globe"></i>
             <input type="search" name="cityName" id="cityName" placeholder="Pesquisar cidade">
-            <button type="submit">
+            <button type="submit" id="searchButton">
                 <i id="searchButtonImg" class="fa-solid fa-magnifying-glass-location"></i>
             </button>
         </form>
 
         <div class="weather">
-            <h1>Cidade</h1>
-
-            <div class="weatherInfos">
-                <div class="mapLocation">
-                    <img src="icons/rotatingEarthGif.gif" width="50"> 
-                </div>
-
-                <div class="tempInfos">
-                    <div class="tempImg">
-                        <img src="https://openweathermap.org/img/wn/13d@2x.png" alt="img">
-                    </div>
-
-                    <div>
-                        <p id="tempValue"> 32<sup>C°</sup></p>
-                        <p id="tempDescription">Solarado!</p>
-                    </div>
-                </div>
-                
-                <div class="dataInfos">
-                    
-                    <div class="infos">
-                        <i id="minTempImg" class="fa-solid fa-temperature-low"></i>
-                        <div>
-                            <h2>Temp. Min</h2>
-                            <p>Aqui tá frio¡</p>
-                        </div>
-                    </div>
-
-                    <div class="infos">
-                        <i id="maxTempImg" class="fa-solid fa-temperature-high"></i>
-                        <div>
-                            <h2>Temp. Max</h2>
-                            <p>Aqui tá calor!</p>
-                        </div>
-                    </div>
-
-                    <div class="infos">
-                        <i id="humidityImg" class="fa-solid fa-droplet"></i>
-                        <div>
-                            <h2>Umidade</h2>
-                            <p>Molhado aqui</p>
-                        </div>
-                    </div>
-
-                    <div class="infos">
-                        <i id="windImg" class="fa-solid fa-wind"></i>
-                        <div>
-                            <h2>Vel. do Vento</h2>
-                            <p>Vento ventania</p>
-                        </div>
-                    </div>
-                    
-                    </div>
-                </div>
-            </div>
         </div>
+
+        <div class="alert"></div>
     </div>
+
+    <script>
+        (g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })({
+            key: "AIzaSyDcg76GNPk0vm1tbfjiqqDaV_3msc7mPGE",
+            v: "weekly",
+        });
+    </script>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
