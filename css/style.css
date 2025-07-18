@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+*{
+    font-family: 'Michroma', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bridgesBlue: #020529
+}
+
+body{
+    background-image: url(/icons/earth.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container{
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+
+    width: 400px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.10);
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    
+    gap: 10px;
+    border: 1px solid #020529;
+    border-radius: 10px;
+    padding: 5px 12px;
+}
+
+.search input{
+    border: none;
+    background: transparent;
+    outline:none;
+    
+
+    font-size: 15px;
+    width: 100%;
+}
+
+.search button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.weather{
+    margin-top: 20px;
+}
+
+.mapLocation{
+    display: flex;
+    justify-content: center;
+}
+.weather h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tempInfos{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+
+    margin-top: 20px;
+    padding:10px;
+    gap: 1px;
+
+    background: linear-gradient(#0512a7,#079dca);
+    color:white;
+
+    border-radius: 20px ;
+}
+
+#tempValue{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#tempDescription{
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.dataInfos{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 20px;
+    gap: 20px
+}
+
+.infos{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 10px;
+    
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+    border-radius: 20px;
+
+    gap: 10px;
+}
+
+.infos h2{
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.infos i{
+    font-size: 25px;
+    text-align: center;
+
+    width: 20%;
+}
+
+.infos #minTempImg{
+    color: rgb(10, 150, 192);
+}
+
+.infos #maxTempImg{
+    color:rgb(187, 6, 6) 
+}
+
+.infos #humidityImg{
+    color:rgb(30, 58, 218)
+}
+
+.infos #windImg{
+    color:#2ee4a7
+}
