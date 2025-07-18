@@ -52,7 +52,16 @@ body{
     
 
     font-size: 15px;
-    width: 100%;
+}
+
+.search #cityName{
+    width: 70%;
+}
+
+.search #countryCode{
+    width: 30%;
+    border-left: 1px solid;
+    gap: 10px
 }
 
 .search button{

@@ -5,6 +5,7 @@ let map;
 document.querySelector('.search').addEventListener('submit', async (event) => {
     event.preventDefault();
     const cityName = document.querySelector('#cityName').value;
+    const countryCode = document.querySelector('#countryCode').value;
 
     if (!cityName) {
         showAlert
@@ -14,9 +15,18 @@ document.querySelector('.search').addEventListener('submit', async (event) => {
         `)
     }
 
+    let apiAcess;
 
-    const apiAcess = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(cityName)}&appid=${weatherApiKey}&units=metric&lang=pt_br`
-    console.log(apiAcess)
+    if(countryCode)
+    {
+        apiAcess = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(cityName)},${countryCode}&appid=${weatherApiKey}&units=metric&lang=pt_br`
+    }
+    else
+    {
+        apiAcess = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(cityName)}&appid=${weatherApiKey}&units=metric&lang=pt_br`
+    
+    }
+    
     const result = await fetch(apiAcess);
     const json = await result.json();
 
@@ -79,7 +89,7 @@ function showInfos(json)
                         <i id="minTempImg" class="fa-solid fa-temperature-low"></i>
                         <div>
                             <h2>Temp. Min</h2>
-                            <p>${json.tempMin}</p>
+                            <p>${json.tempMin} <sup>cº</sup></p>
                         </div>
                     </div>
 
@@ -87,7 +97,7 @@ function showInfos(json)
                         <i id="maxTempImg" class="fa-solid fa-temperature-high"></i>
                         <div>
                             <h2>Temp. Max</h2>
-                            <p>${json.tempMax}</p>
+                            <p>${json.tempMax} <sup>cº</sup></p>
                         </div>
                     </div>
 
