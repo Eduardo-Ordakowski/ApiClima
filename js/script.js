@@ -1,4 +1,4 @@
-const weatherApiKey = "c390e37c00afe2bec8d0edfb9a27bedb";
+const weatherApiKey = //Insira a sua chave API Open Weather;
 const weatherHTML = document.querySelector('.weather');
 
 let map;
